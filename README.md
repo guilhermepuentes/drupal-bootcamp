@@ -76,4 +76,7 @@ Destroy Lando (use carefully, because you will loose your database information):
 ```sh
 > lando destroy
 ```
-
+Use this command to display information from your local environment. The result will be a list with the main information of your local project. See example in images (Issues):
+```sh
+> lando drush status
+```
