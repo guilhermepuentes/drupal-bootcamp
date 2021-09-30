@@ -76,7 +76,9 @@ Destroy Lando (use carefully, because you will loose your database information):
 ```sh
 > lando destroy
 ```
-lando drush status (Use this command to display information from your local environment). The result will be a list with the main information of your local project. See example in images (Issues): ![tarefa_1_cli_via_terminal_evidencia_ambiente_](https://user-images.githubusercontent.com/88501557/135371187-1b7c719b-7942-4a04-a7b9-d3908911b22c.png)
+lando drush status (Use this command to display information from your local environment). The result will be a list with the main information of your local project. See example in images (Issues): 
 ```sh
 > lando drush status
 ```
+
+![tarefa_1_cli_via_terminal_evidencia_ambiente_](https://user-images.githubusercontent.com/88501557/135371187-1b7c719b-7942-4a04-a7b9-d3908911b22c.png)
