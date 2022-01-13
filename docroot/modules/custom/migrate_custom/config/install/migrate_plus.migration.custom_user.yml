@@ -1,0 +1,22 @@
+id: custom_user
+label: User accounts
+migration_group: custom_user
+source:
+  plugin: custom_user
+process:
+  name: name
+  pass: pass
+  mail: email
+  login: login
+  status:
+    plugin: default_value
+    default_value: 1
+  timezone:
+    plugin: user_update_7002
+    source: timezone
+  roles:
+    plugin: default_value
+    default_value: editor
+destination:
+  plugin: entity:user
+  md5_passwords: false

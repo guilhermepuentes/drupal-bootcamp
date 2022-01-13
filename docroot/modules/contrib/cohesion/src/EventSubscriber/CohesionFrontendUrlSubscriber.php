@@ -2,7 +2,7 @@
 
 namespace Drupal\cohesion\EventSubscriber;
 
-use Drupal\cohesion\Event\CohesionJsAppUrlsEvent;
+use Drupal\cohesion\Event\FrontendUrlsEvent;
 use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -17,61 +17,50 @@ class CohesionFrontendUrlSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     return [
-      CohesionJsAppUrlsEvent::FRONTEND_URL => 'registerFrontendUrls',
-      CohesionJsAppUrlsEvent::ADMIN_URL => 'registerAdminUrls',
+      FrontendUrlsEvent::EVENT_NAME => 'registerUrls',
     ];
   }
 
   /**
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
+   * URls for javascript app
+   *
+   * @param \Drupal\cohesion\Event\FrontendUrlsEvent $event
    */
-  public function registerFrontendUrls(CohesionJsAppUrlsEvent $event) {
-    $this->registerCommonUrls($event);
-  }
-
-  public function registerAdminUrls(CohesionJsAppUrlsEvent $event) {
-    $this->registerCommonUrls($event);
-
-    // URL for form field elements
-    $url = Url::fromRoute('cohesion_website_settings.elements', ['group' => 'form_elements'])->toString();
-    $event->addUrl('field-list', [
+  public function registerUrls(FrontendUrlsEvent $event) {
+    // Component categories
+    $url = Url::fromRoute('cohesion_elements.categories', ['element_type' => 'component'])->toString();
+    $event->addFrontEndUrl('component-categories', [
       'url' => $url,
       'method' => 'GET'
     ]);
-  }
 
-  /**
-   * URL needed for the js app for both admin and visual page builder
-   *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
-   */
-  public function registerCommonUrls(CohesionJsAppUrlsEvent $event) {
-    // Component categories
-    $url = Url::fromRoute('cohesion_elements.categories', ['element_type' => 'component'])->toString();
-    $event->addUrl('component-categories', [
+    $event->addAdminUrls('component-categories', [
       'url' => $url,
       'method' => 'GET'
     ]);
 
     // helper categories
     $url = Url::fromRoute('cohesion_elements.categories', ['element_type' => 'helper'])->toString();
-    $event->addUrl('helper-categories', [
+    $event->addFrontEndUrl('helper-categories', [
+      'url' => $url,
+      'method' => 'GET'
+    ]);
+
+    $event->addAdminUrls('helper-categories', [
       'url' => $url,
       'method' => 'GET'
     ]);
 
     // Save element
     $url = Url::fromRoute('drupal_data_endpoint.element_save')->toString();
-    $event->addUrl('element-save', [
+    $event->addFrontEndUrl('element-save', [
       'url' => $url,
       'method' => 'POST'
     ]);
 
-    // Sidebar element
-    $url = Url::fromRoute('sitestudio-page-builder.layout_canvas.frontend_edit_component', ['coh_clean_page' => 'true'])->toString();
-    $event->addUrl('sidebar-edit', [
+    $event->addAdminUrls('element-save', [
       'url' => $url,
-      'method' => 'GET'
+      'method' => 'POST'
     ]);
   }
 

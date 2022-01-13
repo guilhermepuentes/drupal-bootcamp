@@ -2,10 +2,11 @@
 
 namespace Drupal\cohesion_elements\EventSubscriber;
 
-use Drupal\cohesion\Event\CohesionJsAppUrlsEvent;
-use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+use Drupal\cohesion_elements\ComponentContentInterface;
+use Drupal\cohesion_elements\Entity\Component;
+use Drupal\cohesion\Event\FrontendUrlsEvent;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
@@ -40,18 +41,6 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
   protected $entityFieldManager;
 
   /**
-   * The entity type id of the route entity
-   * @var string|null
-   */
-  private $entity_type_id = NULL;
-
-  /**
-   * The bundle of the route entity
-   * @var null|string
-   */
-  private $bundle = NULL;
-
-  /**
    * SitestudioPageBuilderEventSubscriber constructor.
    *
    * @param \Drupal\Core\Session\AccountInterface $user
@@ -65,24 +54,6 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
     $this->user = $user;
     $this->currentRouteMatch = $current_route_match;
     $this->entityFieldManager = $entity_field_manager;
-    $this->setEntityTypeIdBundleFromParam();
-  }
-
-  /**
-   * Retreive the entity type id and bundle from the request params
-   */
-  private function setEntityTypeIdBundleFromParam() {
-    $params = $this->currentRouteMatch->getParameters();
-    $entity_type_id = NULL;
-    $bundle = NULL;
-    foreach ($this->currentRouteMatch->getParameters() as $param_key => $param) {
-      if ($param instanceof EntityInterface) {
-        $this->entity_type_id = $param->getEntityTypeId();
-        $this->bundle = $param->bundle();
-      }elseif($param_key == 'entity_type_id') {
-        $this->entity_type_id = $param;
-      }
-    }
   }
 
   /**
@@ -90,62 +61,41 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     return [
-      CohesionJsAppUrlsEvent::FRONTEND_URL => 'registerFrontendUrls',
-      CohesionJsAppUrlsEvent::ADMIN_URL => 'registerAdminUrls',
+      FrontendUrlsEvent::EVENT_NAME => 'registerUrls',
     ];
-  }
-
-  /**
-   * Register urls for visual page builder
-   *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
-   */
-  public function registerFrontendUrls(CohesionJsAppUrlsEvent $event) {
-    $this->registerUrls($event);
-    $this->addHelperListUrl($event, FALSE);
-  }
-
-  /**
-   * Register urls for admin app
-   *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
-   */
-  public function registerAdminUrls(CohesionJsAppUrlsEvent $event) {
-    $this->registerUrls($event);
-    $this->addHelperListUrl($event, TRUE);
-
-    $url = Url::fromRoute('cohesion_elements.component.preview_post')->toString();
-    $event->addUrl('preview-layout-canvas', [
-      'url' => $url,
-      'method' => 'POST'
-    ]);
   }
 
   /**
    * Registers urls for component, helper sidebar browser list
    *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
+   * @param \Drupal\cohesion\Event\FrontendUrlsEvent $event
    */
-  public function registerUrls(CohesionJsAppUrlsEvent $event) {
+  public function registerUrls(FrontendUrlsEvent $event) {
     $this->addComponentListUrl($event);
+    $this->addHelperListUrl($event);
     $this->addComponentContentListUrl($event);
-    $this->addElementsListUrl($event);
   }
 
   /**
    * Add components list url for the sidebar browser to the front and admin urls
    *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
+   * @param $event
    */
-  private function addComponentListUrl(CohesionJsAppUrlsEvent $event) {
+  private function addComponentListUrl($event) {
     $route_params = [
       'entity_type' => 'cohesion_component'
     ];
-    $this->getAccessList($route_params, $event);
+
+    $this->functionGetAccessList($route_params);
 
     $url = Url::fromRoute('drupal_data_endpoint.element_group_info', [$route_params])->toString();
 
-    $event->addUrl('component-elements-list', [
+    $event->addFrontEndUrl('component-elements-list', [
+      'url' => $url,
+      'method' => 'GET'
+    ]);
+
+    $event->addAdminUrls('component-elements-list', [
       'url' => $url,
       'method' => 'GET'
     ]);
@@ -154,29 +104,19 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
   /**
    * Add the helpers list for the sidebar browser to the front and admin urls
    *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
-   * @param bool $for_admin
-   *   whether the url is for admin pages or visual page builder
+   * @param $event
    */
-  private function addHelperListUrl(CohesionJsAppUrlsEvent $event, $for_admin) {
+  private function addHelperListUrl($event) {
     $route_params = [
       'entity_type' => 'cohesion_helper'
     ];
-    $this->getAccessList($route_params, $event);
 
-    $route_params['access_elements'] = 'false';
-    // Only when in admin user can access helpers with elements
-    // If visual page builder user cannot access any helper with elements
-    if($form_state = $event->getFormState() && $for_admin) {
-      $complete_form = $event->getFormState()->getCompleteForm();
-      if(isset($complete_form['#attached']['drupalSettings']['cohesion']['permissions']) && in_array('access elements', $complete_form['#attached']['drupalSettings']['cohesion']['permissions'])) {
-        $route_params['access_elements'] = 'true';
-      }
-    }
+    $this->functionGetAccessList($route_params);
 
     // Access elements on the frontend is not allowed
+    $route_params['access_elements'] = 'false';
     $url = Url::fromRoute('drupal_data_endpoint.element_group_info', [$route_params])->toString();
-    $event->addUrl('helpers-elements-list', [
+    $event->addFrontEndUrl('helpers-elements-list', [
       'url' => $url,
       'method' => 'GET'
     ]);
@@ -185,26 +125,44 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
   /**
    * Add component content list for the sidebar browser to the front and adming urls
    *
-   * @param \Drupal\cohesion\Event\CohesionJsAppUrlsEvent $event
+   * @param $event
    */
-  private function addComponentContentListUrl(CohesionJsAppUrlsEvent $event) {
+  private function addComponentContentListUrl($event) {
     $route_params = [];
+    $entity = $this->getCurrentPathEntity();
 
-    if ($this->entity_type_id == 'component_content' && $this->currentRouteMatch->getRouteName()) {
-      $route_params['componentPath'] = Url::fromRouteMatch($this->currentRouteMatch)
-        ->getInternalPath();
+    if($entity instanceof ComponentContentInterface && $this->currentRouteMatch->getRouteName()) {
+      $route_params['componentPath'] = Url::fromRouteMatch($this->currentRouteMatch)->getInternalPath();
     }
 
-    if (!empty($route_params)) {
+    if(!empty($route_params)) {
       $route_params = [$route_params];
     }
 
-    $url = Url::fromRoute('cohesion_elements.endpoints.component_contents', $route_params)
-      ->toString();
-    $event->addUrl('component-content-elements-list', [
+    $url = Url::fromRoute('cohesion_elements.endpoints.component_contents', $route_params)->toString();
+    $event->addFrontEndUrl('component-content-elements-list', [
       'url' => $url,
       'method' => 'GET'
     ]);
+
+    $event->addAdminUrls('component-content-elements-list', [
+      'url' => $url,
+      'method' => 'GET'
+    ]);
+  }
+
+  /**
+   * Return the current request entity
+   *
+   * @return \Drupal\Core\Entity\EntityInterface|null
+   */
+  private function getCurrentPathEntity() {
+    foreach ($this->currentRouteMatch->getParameters() as $param_key => $param) {
+      if ($param instanceof ContentEntityInterface) {
+        return $param;
+      }
+    }
+    return NULL;
   }
 
   /**
@@ -212,19 +170,16 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
    *
    * @param $route_params
    */
-  private function getAccessList(&$route_params, CohesionJsAppUrlsEvent $event) {
-    if($this->entity_type_id == 'cohesion_component' && $this->currentRouteMatch->getRouteName()) {
+  private function functionGetAccessList(&$route_params) {
+    $entity = $this->getCurrentPathEntity();
+
+    if($entity instanceof Component && $this->currentRouteMatch->getRouteName()) {
       $route_params['componentPath'] = Url::fromRouteMatch($this->currentRouteMatch)->getInternalPath();
     }
 
-    // If this is a content entity (has a form display) add the entity type and bundle
-    // to the request to restrict component list if needed
-    if($form_state = $event->getFormState()) {
-      $storage = $form_state->getStorage();
-      if(isset($storage['form_display']) && $storage['form_display'] instanceof EntityFormDisplayInterface) {
-        $route_params['entity_type_access'] = $storage['form_display']->getTargetEntityTypeId();
-        $route_params['bundle_access'] = $storage['form_display']->getTargetBundle();
-      }
+    if($entity instanceof ContentEntityInterface) {
+      $route_params['entity_type_access'] = $entity->getEntityTypeId();
+      $route_params['bundle_access'] = $entity->bundle();
     }
 
     // Global settings for these pages
@@ -239,26 +194,6 @@ class CohesionElementsEventSubscriber implements EventSubscriberInterface {
       $route_params['entity_type_access'] = 'dx8_templates';
       $route_params['bundle_access'] = 'dx8_templates';
     }
-  }
-
-  /**
-   * Add elements list for the sidebar browser to the front and adming urls
-   *
-   * @param $event
-   */
-  private function addElementsListUrl(CohesionJsAppUrlsEvent $event) {
-    $route_params = [
-      'group' => 'elements',
-      'withcategories' => TRUE,
-      'entityTypeId' => $this->entity_type_id,
-    ];
-
-    $url = Url::fromRoute('cohesion_website_settings.elements', $route_params)->toString();
-
-    $event->addUrl('elements-list', [
-      'url' => $url,
-      'method' => 'GET'
-    ]);
   }
 
 }

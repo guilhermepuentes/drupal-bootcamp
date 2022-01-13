@@ -30,7 +30,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     },
  *   },
  *   admin_permission = "access cohesion sync",
- *   config_prefix = "cohesion_sync_package",
+ *   config_prefix = "package",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label"

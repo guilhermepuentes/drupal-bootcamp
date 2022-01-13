@@ -21,8 +21,7 @@ use Drupal\Core\Entity\EntityInterface;
  *   exclude_from_package_requirements = TRUE,
  *   exportable = FALSE,
  *   config_type = "core",
- *   scan_groups = {"site_studio"},
- *   can_be_excluded = FALSE
+ *   scan_groups = {"site_studio"}
  * )
  */
 class WebformUsage extends UsagePluginBase {

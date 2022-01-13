@@ -22,8 +22,7 @@ use Drupal\Core\Entity\EntityInterface;
  *   exclude_from_package_requirements = FALSE,
  *   exportable = TRUE,
  *   config_type = "core",
- *   scan_groups = {"core", "site_studio"},
- *   can_be_excluded = TRUE
+ *   scan_groups = {"core", "site_studio"}
  * )
  */
 class ViewUsage extends UsagePluginBase {

@@ -91,7 +91,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  * During development it can be useful to install test extensions for debugging
  * purposes.
  */
-$settings['extension_discovery_scan_tests'] = FALSE;
+$settings['extension_discovery_scan_tests'] = TRUE;
 
 
 /**
@@ -128,7 +128,7 @@ $settings['rebuild_access'] = FALSE;
  * user pulling in the changes won't have permissions to modify files in the
  * directory.
  */
-$settings['skip_permissions_hardening'] = TRUE;
+$settings['skip_permissions_hardening'] = FALSE;
 
 /**
  * Files paths.

@@ -3,8 +3,6 @@
 namespace Drupal\cohesion_website_settings\Controller;
 
 use Drupal\cohesion\CohesionJsonResponse;
-use Drupal\cohesion\Event\SiteStudioEvents;
-use Drupal\cohesion\Event\PreRebuildEvent;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Config\Entity\ConfigEntityTypeInterface;
@@ -522,11 +520,6 @@ class WebsiteSettingsController extends ControllerBase implements ContainerInjec
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public static function batch($cron = FALSE, $verbose = FALSE, $no_cache_clear = FALSE) {
-
-    // Setup an event to be dispatched pre rebuild.
-    $pre_event = new PreRebuildEvent();
-    \Drupal::service('event_dispatcher')->dispatch(SiteStudioEvents::PRE_REBUILD, $pre_event);
-
     // Reset temporary template list.
     \Drupal::keyValue('cohesion.temporary_template')->set('temporary_templates', []);
 

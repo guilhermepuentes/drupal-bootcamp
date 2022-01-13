@@ -18,8 +18,7 @@ namespace Drupal\cohesion_elements\Plugin\Usage;
  *   exclude_from_package_requirements = FALSE,
  *   exportable = TRUE,
  *   config_type = "site_studio",
- *   scan_groups = {"core", "site_studio"},
- *   can_be_excluded = TRUE
+ *   scan_groups = {"core", "site_studio"}
  * )
  */
 class ComponentUsage extends ElementUsageBase {

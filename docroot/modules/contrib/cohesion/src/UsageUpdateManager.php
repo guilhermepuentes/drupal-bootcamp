@@ -101,7 +101,7 @@ class UsageUpdateManager {
    *
    * @throws \Drupal\Component\Plugin\Exception\PluginException
    */
-  public function getDependencies(EntityInterface $entity) {
+  private function getDependencies(EntityInterface $entity) {
     $scannable_data = [];
     $dependencies = [];
     $scan_groups = [];
@@ -240,31 +240,18 @@ class UsageUpdateManager {
   }
 
   /**
-   * Get the raw list of in-use entities for Entity object.
+   * Get the raw list of in-use entities.
    *
    * @param \Drupal\Core\Entity\EntityInterface $entity
    *
-   * @return {@inheritdoc}
+   * @return array
    */
   public function getInUseEntitiesList(EntityInterface $entity) {
-    return $this->getInUseEntitiesListByUuid($entity->uuid());
-  }
-
-  /**
-   * Get the raw list of in-use entities by using Entity UUID.
-   *
-   * @param string $uuid
-   *   Uuid string.
-   *
-   * @return array
-   *   Array of entity types and uuids in ['uuid' => 'entity_type'] format.
-   */
-  public function getInUseEntitiesListByUuid(string $uuid): array {
     // Get the usage from the table (right hand side lookup).
     try {
       $usage = $this->connection->select('coh_usage', 'c1')
         ->fields('c1', ['source_uuid', 'source_type'])
-        ->condition('c1.requires_uuid', $uuid, '=')
+        ->condition('c1.requires_uuid', $entity->uuid(), '=')
         ->execute()
         ->fetchAllKeyed();
     }
@@ -371,16 +358,14 @@ class UsageUpdateManager {
   /**
    * Build config entity dependencies from Usage table.
    *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *   Config Entity.
+   * @param \Drupal\Core\Config\Entity\ConfigEntityBase $entity
    *
    * @return array
-   *   Array of dependencies.
    */
-  public function buildConfigEntityDependencies(EntityInterface $entity) {
+  public function buildConfigEntityDependencies(ConfigEntityBase $entity) {
     $list = [];
     // Request storage to hold dependencies already processed
-    // to avoid processing the same entities multiple times.
+    // to avoid processing the same entities multiple times
     $dep_list = &drupal_static(__FUNCTION__, []);
 
     if ($entity instanceof ConfigEntityBase) {
@@ -400,12 +385,12 @@ class UsageUpdateManager {
 
       // Group uuids to be processed by entity type
       // to use loadMultiple instead of loading by UUID one by one
-      // for more performance.
+      // for more performance
       $typed_uuids = [];
       foreach ($dependencies as $uuid => $type) {
         // If the entity has already been processed by another
-        // dependency calculation add to the list and skip.
-        if (isset($dep_list[$uuid])) {
+        // dependency calculation add to the list and skip
+        if(isset($dep_list[$uuid])) {
           $list[] = $dep_list[$uuid];
           continue;
         }
@@ -415,13 +400,7 @@ class UsageUpdateManager {
       // Loop through the results and add them to the dependencies.
       foreach ($typed_uuids as $type => $uuids) {
 
-        try {
-          $entity_type = $this->entityTypeManager->getDefinition($type);
-        }
-        catch (\Exception $e) {
-          \Drupal::logger('cohesion')->warning($e->getMessage());
-          continue;
-        }
+        $entity_type = $this->entityTypeManager->getDefinition($type);
         $ids = $this->entityTypeManager->getStorage($type)->getQuery()->condition($entity_type->getKey('uuid'), $uuids, 'IN')->execute();
 
         $entities = $this->entityTypeManager->getStorage($type)->loadMultiple($ids);
@@ -437,7 +416,7 @@ class UsageUpdateManager {
           ];
           $list[] = $item;
           // Add to the processed list of entities so we don't do it again
-          // if it's a dependency of another entity.
+          // if it's a dependency of another entity
           $dep_list[$dependency_entity->uuid()] = $item;
         }
       }

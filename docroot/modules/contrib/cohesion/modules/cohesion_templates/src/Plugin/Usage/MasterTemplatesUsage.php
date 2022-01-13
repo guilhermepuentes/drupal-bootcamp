@@ -21,8 +21,7 @@ use Drupal\Core\Entity\EntityInterface;
  *   exclude_from_package_requirements = FALSE,
  *   exportable = TRUE,
  *   config_type = "site_studio",
- *   scan_groups = {"site_studio"},
- *   can_be_excluded = TRUE
+ *   scan_groups = {"site_studio"}
  * )
  */
 class MasterTemplatesUsage extends UsagePluginBase {

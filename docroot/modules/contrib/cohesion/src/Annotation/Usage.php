@@ -103,11 +103,4 @@ class Usage extends Plugin {
    */
   public $scan_groups = [];
 
-  /**
-   * Should entities of this type be included in the exclude list on package form?
-   *
-   * @var bool
-   */
-  public $can_be_excluded;
-
 }

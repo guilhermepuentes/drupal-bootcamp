@@ -89,11 +89,3 @@ This file should only contain a simple array which references paths to local or 
 ```
 
 When including local files, the path should be relative to the module root directory. 
-
-## Sync packages
-
-List available sync packages:
-
-```
-drush sitestudio:package:list
-```  

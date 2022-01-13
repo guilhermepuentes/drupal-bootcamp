@@ -1,0 +1,41 @@
+id: custom_ct_page
+label: Content Type Page
+migration_group: custom_ct_page
+source:
+  plugin: custom_ct_page
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "pt-br"
+  title: title
+  uid:
+    plugin: migration
+    migration: custom_user
+    source: autor
+  status: status
+  sticky:
+    plugin: default_value
+    default_value: 0
+  'body/format':
+    plugin: default_value
+    default_value: "full_html"
+  'body/value': body
+  field_tags:
+    plugin: migration
+    migration: custom_tags
+    source: tags
+  field_image:
+    plugin: migration
+    migration: custom_files
+    source: image_fid
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required:
+    - custom_tags
+    - custom_files
+    - custom_user

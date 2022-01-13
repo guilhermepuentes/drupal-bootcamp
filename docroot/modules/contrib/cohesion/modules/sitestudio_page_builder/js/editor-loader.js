@@ -21,10 +21,10 @@
   drupalSettings.cohesion.formId = 'frontendEditor';
   let localStorageLocation = 'Drupal.siteStudio.pageBuilderEnabled';
   let pageBuilderEnabled = isPageBuilderEnabled();
-  const $loader = $('<div class="coh-editor-loading-container"><div class="coh-editor-loading"><p class="visually-hidden">Loading</p></div></div>');
+  const $loader = $('<div class="coh-editor-loading-container"><div class="coh-editor-loading"><p class="visually-hidden">Loading</p></div></div>')
 
   function initLoader() {
-    $('body').append($loader);
+    $('body').append($loader)
   }
 
   function removeLoader() {
@@ -44,26 +44,31 @@
     toolbarBar.setAttribute('aria-hidden', 'true');
   }
 
+  function removeContextualEdit() {
+    $('[data-contextual-id], .contextual, .dx-contextual-region-mask, .dx-contextual-region').remove();
+  }
+
   function enablePageBuilder(ev) {
-    if (ev) {
+    if(ev) {
       ev.preventDefault();
     }
 
-    if (isDrupalInEditMode()) {
+    if(isDrupalInEditMode()) {
       // Come out of Drupal's edit mode by triggering a click of the edit button.
       $('#toolbar-bar .toolbar-icon-edit').click();
     }
 
+    removeContextualEdit();
     initLoader();
 
     $('#coh-builder-btn').attr('aria-pressed', 'true');
 
     // Init the Site Studio page builder
-    const appEl = document.getElementById('ssaApp');
+    const appEl = document.getElementById('cohApp');
     if (!appEl) {
       const domEl = document.createElement('div');
-      domEl.id = 'ssaApp';
-      domEl.classList.add('ssa-app');
+      domEl.id = 'cohApp';
+      domEl.classList.add('coh-app');
       document.body.appendChild(domEl);
       $.getScript(drupalSettings.cohesion.urls['frontend-builder-js'].url, function () {
         removeDrupalToolbar();
@@ -81,7 +86,7 @@
   }
 
   function isPageBuilderEnabled() {
-    return localStorage.getItem(localStorageLocation) === 'true';
+    return localStorage.getItem(localStorageLocation) === 'true'
   }
 
   /**
@@ -98,21 +103,21 @@
       $('body', context)
           .once('initSiteStudio')
           .each(function() {
-            if ($('[data-ssa-canvas]').length > 0) {
+            if($('[data-coh-canvas]').length > 0) {
 
-              if (isPageBuilderEnabled()) {
-                enablePageBuilder();
+              if(isPageBuilderEnabled()) {
+                enablePageBuilder()
               }
 
               $('#coh-builder-btn').on('click', ()=> {
-                if (!isPageBuilderEnabled()) {
-                  enablePageBuilder();
+                if(!isPageBuilderEnabled()) {
+                  enablePageBuilder()
                 }
               });
 
-              $('#ssa-builder-toggle').removeClass('hidden');
+              $('#coh-builder-toggle').removeClass('hidden');
             } else {
-              $('#ssa-builder-toggle').addClass('hidden');
+              $('#coh-builder-toggle').addClass('hidden');
             }
           });
     }

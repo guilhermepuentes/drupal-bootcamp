@@ -5,7 +5,3 @@ cohesion.sync.settings:
       type: sequence
       sequence:
         type: string
-    package_export_limit:
-      type: integer
-    full_export_limit:
-      type: integer

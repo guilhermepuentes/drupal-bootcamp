@@ -18,8 +18,7 @@ namespace Drupal\cohesion\Plugin\Usage;
  *   exclude_from_package_requirements = TRUE,
  *   exportable = FALSE,
  *   config_type = "core",
- *   scan_groups = {"core", "site_studio"},
- *   can_be_excluded = FALSE
+ *   scan_groups = {"core", "site_studio"}
  * )
  */
 class NodeUsage extends FieldableContentEntityUsageBase {

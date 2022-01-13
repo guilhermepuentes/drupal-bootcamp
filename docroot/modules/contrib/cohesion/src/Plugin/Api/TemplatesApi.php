@@ -30,7 +30,7 @@ class TemplatesApi extends ApiPluginBase {
   }
 
   /**
-   * @var \Drupal\cohesion\Entity\EntityJsonValuesInterface|\Drupal\cohesion\TemplateEntityTrait
+   * @var \Drupal\cohesion\Entity\EntityJsonValuesInterface
    */
   protected $entity;
 
@@ -135,6 +135,10 @@ class TemplatesApi extends ApiPluginBase {
     // If it's a component template, tell the API.
     if ($this->entity instanceof Component) {
       $this->data->settings->isComponentTemplate = TRUE;
+
+      if ($this->entity->get('has_quick_edit') === NULL || $this->entity->get('has_quick_edit') === TRUE) {
+        $this->data->settings->isComponentContextual = TRUE;
+      }
     }
 
     if ($this->entity instanceof ContentEntityInterface || $this->is_preview) {
@@ -194,11 +198,15 @@ class TemplatesApi extends ApiPluginBase {
       if (count($templates) == 1) {
         // Save the unique template and remove any theme specific template that might have been saved if the template contained style guide manager values.
         $this->saveResponseTemplate($templates[0]);
-        $this->entity->removeThemeSpecificTemplates();
+        foreach ($this->cohesionUtils->getCohesionEnabledThemes() as $theme_info) {
+          $theme_filename = $this->entity->getTwigFilename($theme_info->getName()) . '.html.twig';
+          \Drupal::service('cohesion.template_storage')->delete($theme_filename);
+        }
       }
       else {
         // Remove all theme global twig if any and no theme are set to generate template only.
-        $this->entity->removeGlobalTemplate();
+        $global_filename = COHESION_TEMPLATE_PATH . '/' . $this->entity->getTwigFilename() . '.html.twig';
+        \Drupal::service('cohesion.template_storage')->delete($global_filename);
 
         foreach ($this->getData() as $response) {
           if (isset($response['template']) && isset($response['themeName'])) {
