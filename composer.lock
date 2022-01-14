@@ -4,9 +4,13 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3228ad5b8e0934048e69ffe60df82f0",
-    "packages": [
-        {
+    <<
+    << << < Updated upstream "content-hash": "f3228ad5b8e0934048e69ffe60df82f0",
+    ===
+    === =
+    "content-hash": "94b69f5b486d949902eeacee34a97db2",
+    >>>
+    >>> > Stashed changes "packages": [{
             "name": "acquia/blt",
             "version": "12.7.0",
             "source": {
@@ -28,7 +32,7 @@
                 "consolidation/robo": "^1.4.12 || ^2",
                 "dflydev/dot-access-data": "^1.1.0",
                 "doctrine/annotations": "^1.10.0",
-                "drupal/core": "^9.0.0-alpha1",
+                "drupal/core": "^9.3.2-alpha1",
                 "drupol/phposinfo": "^1.6",
                 "drush/drush": "^10.2.2",
                 "enlightn/security-checker": "^1.3",
@@ -84,11 +88,9 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "authors": [
-                {
-                    "name": "Matthew Grasmick"
-                }
-            ],
+            "authors": [{
+                "name": "Matthew Grasmick"
+            }],
             "description": "BLT",
             "keywords": [
                 "automation",
@@ -98,97 +100,6 @@
                 "testing"
             ],
             "time": "2021-01-30T01:31:53+00:00"
-        },
-        {
-            "name": "acquia/cohesion",
-            "version": "6.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/acquia/cohesion.git",
-                "reference": "1a94f3923d64353cb4b12dc64d235ede7b9ee711"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/1a94f3923d64353cb4b12dc64d235ede7b9ee711",
-                "reference": "1a94f3923d64353cb4b12dc64d235ede7b9ee711",
-                "shasum": ""
-            },
-            "require": {
-                "cweagans/composer-patches": "^1.6",
-                "drupal/entity_reference_revisions": "^1.7",
-                "drupal/imce": "^2.2",
-                "drupal/token": "^1.5",
-                "ext-json": "*"
-            },
-            "require-dev": {
-                "acquia/coding-standards": "^0.4.1",
-                "behat/mink": "^1.7",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-                "phpunit/phpunit": "^6.5",
-                "symfony/phpunit-bridge": "^4.3"
-            },
-            "suggest": {
-                "drupal/admin_toolbar": "Provides a better UX for the standard admin toolbar",
-                "drupal/context": "Provides a UI for contexts.",
-                "drupal/google_analytics": "Provides integration with Google Analytics",
-                "drupal/menu_item_extras": "Make the Menu Link Content entity fully fieldable.",
-                "drupal/menu_link_attributes": "This module allows you to add attributes to your menu links or their wrapping <li> elements.",
-                "drupal/request_data_conditions": "Defines a set of conditions via the Drupal 8 Conditions Plugin API for use with the context module",
-                "drupal/search_api": "Provides a framework for easily creating searches on any entity known to Drupal, using any kind of search engine.",
-                "drupal/views_infinite_scroll": "Provides infinite scroll functionality to Views",
-                "drupal/webform": "This module allows you to use webforms."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                },
-                "enable-patching": true
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Acquia Engineering",
-                    "homepage": "https://www.acquia.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Site Studio",
-            "time": "2021-10-06T13:30:42+00:00"
-        },
-        {
-            "name": "acquia/cohesion-theme",
-            "version": "6.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "42e566575808511108f2e606ad8e0c694b6859a8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/42e566575808511108f2e606ad8e0c694b6859a8",
-                "reference": "42e566575808511108f2e606ad8e0c694b6859a8",
-                "shasum": ""
-            },
-            "type": "drupal-theme",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Acquia Engineering",
-                    "homepage": "https://www.acquia.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Site Studio minimal theme",
-            "time": "2021-10-06T13:30:59+00:00"
         },
         {
             "name": "acquia/drupal-environment-detector",
@@ -226,13 +137,11 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
-                    "name": "Acquia Engineering",
-                    "homepage": "https://www.acquia.com",
-                    "role": "Maintainer"
-                }
-            ],
+            "authors": [{
+                "name": "Acquia Engineering",
+                "homepage": "https://www.acquia.com",
+                "role": "Maintainer"
+            }],
             "description": "Provides common methods for detecting the current Acquia environment",
             "time": "2021-04-15T17:44:09+00:00"
         },
@@ -274,12 +183,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Alexander",
-                    "email": "iam.asm89@gmail.com"
-                }
-            ],
+            "authors": [{
+                "name": "Alexander",
+                "email": "iam.asm89@gmail.com"
+            }],
             "description": "Cross-origin resource sharing library and stack middleware",
             "homepage": "https://github.com/asm89/stack-cors",
             "keywords": [
@@ -381,13 +288,11 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
+            "authors": [{
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama"
+            }],
             "description": "A multi-framework Composer library installer",
             "homepage": "https://composer.github.io/installers/",
             "keywords": [
@@ -467,8 +372,7 @@
                 "zend",
                 "zikula"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://packagist.com",
                     "type": "custom"
                 },
@@ -519,8 +423,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nils Adermann",
                     "email": "naderman@naderman.de",
                     "homepage": "http://www.naderman.de"
@@ -543,8 +446,7 @@
                 "validation",
                 "versioning"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://packagist.com",
                     "type": "custom"
                 },
@@ -602,12 +504,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
+            "authors": [{
+                "name": "Greg Anderson",
+                "email": "greg.1.anderson@greenknowe.org"
+            }],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "time": "2021-12-30T04:00:37+00:00"
         },
@@ -650,12 +550,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
+            "authors": [{
+                "name": "Greg Anderson",
+                "email": "greg.1.anderson@greenknowe.org"
+            }],
             "description": "A tool for preserving comments, e.g. when parsing YAML files.",
             "time": "2019-07-30T05:52:24+00:00"
         },
@@ -731,12 +629,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
+            "authors": [{
+                "name": "Greg Anderson",
+                "email": "greg.1.anderson@greenknowe.org"
+            }],
             "description": "Provide configuration services for a commandline tool.",
             "time": "2019-03-03T19:37:04+00:00"
         },
@@ -798,12 +694,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
+            "authors": [{
+                "name": "Greg Anderson",
+                "email": "greg.1.anderson@greenknowe.org"
+            }],
             "description": "This project uses dflydev/dot-access-data to provide simple output filtering for applications built with annotated-command / Robo.",
             "time": "2019-01-18T06:05:07+00:00"
         },
@@ -846,12 +740,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
+            "authors": [{
+                "name": "Greg Anderson",
+                "email": "greg.1.anderson@greenknowe.org"
+            }],
             "description": "Improved Psr-3 / Psr\\Log logger based on Symfony Console components.",
             "time": "2021-12-30T19:05:18+00:00"
         },
@@ -901,12 +793,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
+            "authors": [{
+                "name": "Greg Anderson",
+                "email": "greg.1.anderson@greenknowe.org"
+            }],
             "description": "Format text by applying transformations provided by plug-in formatters.",
             "time": "2021-12-30T03:58:00+00:00"
         },
@@ -998,12 +888,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Davert",
-                    "email": "davert.php@resend.cc"
-                }
-            ],
+            "authors": [{
+                "name": "Davert",
+                "email": "davert.php@resend.cc"
+            }],
             "description": "Modern task runner",
             "time": "2020-12-18T22:09:18+00:00"
         },
@@ -1044,8 +932,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Alexander Menk",
                     "email": "menk@mestrona.net"
                 },
@@ -1098,8 +985,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Greg Anderson",
                     "email": "greg.1.anderson@greenknowe.org"
                 },
@@ -1152,8 +1038,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Greg Anderson",
                     "email": "greg.1.anderson@greenknowe.org"
                 },
@@ -1198,50 +1083,6 @@
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
-            "name": "cweagans/composer-patches",
-            "version": "1.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "9888dcc74993c030b75f3dd548bb5e20cdbd740c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/9888dcc74993c030b75f3dd548bb5e20cdbd740c",
-                "reference": "9888dcc74993c030b75f3dd548bb5e20cdbd740c",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0 || ^2.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "composer/composer": "~1.0 || ~2.0",
-                "phpunit/phpunit": "~4.6"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "cweagans\\Composer\\Patches"
-            },
-            "autoload": {
-                "psr-4": {
-                    "cweagans\\Composer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Cameron Eagans",
-                    "email": "me@cweagans.net"
-                }
-            ],
-            "description": "Provides a way to patch Composer packages.",
-            "time": "2021-06-08T15:12:46+00:00"
-        },
-        {
             "name": "dflydev/dot-access-data",
             "version": "v1.1.0",
             "source": {
@@ -1273,8 +1114,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Dragonfly Development Inc.",
                     "email": "info@dflydev.com",
                     "homepage": "http://dflydev.com"
@@ -1337,8 +1177,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
                 },
@@ -1405,8 +1244,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
                 },
@@ -1428,8 +1266,7 @@
                 "parser",
                 "php"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://www.doctrine-project.org/sponsorship.html",
                     "type": "custom"
                 },
@@ -1488,8 +1325,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
                 },
@@ -1558,8 +1394,7 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Wilfrid Roze (eme)",
                     "homepage": "https://www.drupal.org/u/eme",
                     "role": "Maintainer"
@@ -2026,117 +1861,61 @@
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "time": "2022-01-05T02:55:30+00:00"
         },
-        {
-            "name": "drupal/entity_reference_revisions",
+        { <<
+            << << < Updated upstream "name": "drupal/entity_reference_revisions",
             "version": "1.9.0",
-            "source": {
+            ===
+            === =
+            "name": "drupol/phposinfo",
+            "version": "1.6.5",
+            >>>
+            >>> > Stashed changes "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
-                "reference": "8.x-1.9"
+                "url": "https://github.com/drupol/phposinfo.git",
+                "reference": "36b0250d38279c8a131a1898a31e359606024507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "e1c51bdea495eb3b458130d6f0a00c347f5637df"
+                "url": "https://api.github.com/repos/drupol/phposinfo/zipball/36b0250d38279c8a131a1898a31e359606024507",
+                "reference": "36b0250d38279c8a131a1898a31e359606024507",
+                "shasum": ""
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "php": ">= 7.1.3"
             },
             "require-dev": {
-                "drupal/diff": "1.x-dev"
+                "drupol/php-conventions": "^1.7.1",
+                "friends-of-phpspec/phpspec-code-coverage": "^4.3.2",
+                "infection/infection": "^0.13.6 || ^0.15.0",
+                "phpspec/phpspec": "^5.1.2 || ^6.1.1"
             },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1614805871",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "drupol\\phposinfo\\": "src/"
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0-or-later"
+                "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Frans",
-                    "homepage": "https://www.drupal.org/user/514222"
-                },
-                {
-                    "name": "jeroen.b",
-                    "homepage": "https://www.drupal.org/user/1853532"
-                },
-                {
-                    "name": "miro_dietiker",
-                    "homepage": "https://www.drupal.org/user/227761"
-                }
+            "authors": [{
+                "name": "Pol Dellaiera",
+                "email": "pol.dellaiera@protonmail.com"
+            }],
+            "description": "Try to guess the host operating system.",
+            "keywords": [
+                "operating system detection"
             ],
-            "description": "Entity Reference Revisions",
-            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
-            "support": {
-                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
-            }
+            "funding": [{
+                "url": "https://github.com/drupol",
+                "type": "github"
+            }],
+            "abandoned": "loophp/phposinfo",
+            "time": "2020-05-19T14:14:28+00:00"
         },
-        {
-            "name": "drupal/imce",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/imce.git",
-                "reference": "8.x-2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imce-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "2797d6a669b739490edd00c753303cd9263f8dc3"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1618251147",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/2841111/committers",
-                    "role": "Developer"
-                },
-                {
-                    "name": "ufku",
-                    "homepage": "https://www.drupal.org/user/9910"
-                }
-            ],
-            "description": "Provides a file manager supporting personal folders.",
-            "homepage": "https://drupal.org/project/imce",
-            "support": {
-                "source": "https://git.drupalcode.org/project/imce",
-                "issues": "https://www.drupal.org/project/issues/imce?version=8.x"
-            }
-        },
-        {
-            "name": "drupal/token",
+        { <<
+            << << < Updated upstream "name": "drupal/token",
             "version": "1.10.0",
             "source": {
                 "type": "git",
@@ -2172,8 +1951,7 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Berdir",
                     "homepage": "https://www.drupal.org/user/214652"
                 },
@@ -2237,27 +2015,24 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Pol Dellaiera",
-                    "email": "pol.dellaiera@protonmail.com"
-                }
-            ],
+            "authors": [{
+                "name": "Pol Dellaiera",
+                "email": "pol.dellaiera@protonmail.com"
+            }],
             "description": "Try to guess the host operating system.",
             "keywords": [
                 "operating system detection"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/drupol",
-                    "type": "github"
-                }
-            ],
+            "funding": [{
+                "url": "https://github.com/drupol",
+                "type": "github"
+            }],
             "abandoned": "loophp/phposinfo",
             "time": "2020-05-19T14:14:28+00:00"
         },
-        {
-            "name": "drush/drush",
+        { ===
+            === = >>>
+            >>> > Stashed changes "name": "drush/drush",
             "version": "10.6.2",
             "source": {
                 "type": "git",
@@ -2350,8 +2125,7 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Moshe Weitzman",
                     "email": "weitzman@tejasa.com"
                 },
@@ -2386,12 +2160,10 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "funding": [
-                {
-                    "url": "https://github.com/weitzman",
-                    "type": "github"
-                }
-            ],
+            "funding": [{
+                "url": "https://github.com/weitzman",
+                "type": "github"
+            }],
             "time": "2021-12-15T17:09:54+00:00"
         },
         {
@@ -2436,11 +2208,9 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Eduardo Gulias Davis"
-                }
-            ],
+            "authors": [{
+                "name": "Eduardo Gulias Davis"
+            }],
             "description": "A library for validating emails against several RFCs",
             "homepage": "https://github.com/egulias/EmailValidator",
             "keywords": [
@@ -2450,12 +2220,10 @@
                 "validation",
                 "validator"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/egulias",
-                    "type": "github"
-                }
-            ],
+            "funding": [{
+                "url": "https://github.com/egulias",
+                "type": "github"
+            }],
             "time": "2021-10-11T09:18:27+00:00"
         },
         {
@@ -2499,8 +2267,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Paras Malhotra",
                     "email": "paras@laravel-enlightn.com"
                 },
@@ -2559,11 +2326,9 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Matthew Grasmick"
-                }
-            ],
+            "authors": [{
+                "name": "Matthew Grasmick"
+            }],
             "description": "Expands internal property references in PHP arrays file.",
             "time": "2017-12-21T22:14:55+00:00"
         },
@@ -2611,11 +2376,9 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Matthew Grasmick"
-                }
-            ],
+            "authors": [{
+                "name": "Matthew Grasmick"
+            }],
             "description": "A command line tool for reading and manipulating yaml files.",
             "time": "2020-03-02T18:59:34+00:00"
         },
@@ -2659,11 +2422,9 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Matthew Grasmick"
-                }
-            ],
+            "authors": [{
+                "name": "Matthew Grasmick"
+            }],
             "description": "Expands internal property references in a yaml file.",
             "time": "2017-12-16T16:06:03+00:00"
         },
@@ -2714,13 +2475,11 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
+            "authors": [{
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }],
             "description": "Guzzle is a PHP HTTP client library",
             "homepage": "http://guzzlephp.org/",
             "keywords": [
@@ -2772,8 +2531,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
@@ -2798,8 +2556,7 @@
             "keywords": [
                 "promise"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://github.com/GrahamCampbell",
                     "type": "github"
                 },
@@ -2861,8 +2618,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
@@ -2904,8 +2660,7 @@
                 "uri",
                 "url"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://github.com/GrahamCampbell",
                     "type": "github"
                 },
@@ -3003,12 +2758,10 @@
                 "psr-17",
                 "psr-7"
             ],
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
+            "funding": [{
+                "url": "https://funding.communitybridge.org/projects/laminas-project",
+                "type": "community_bridge"
+            }],
             "time": "2021-09-22T03:54:36+00:00"
         },
         {
@@ -3057,12 +2810,10 @@
                 "escaper",
                 "laminas"
             ],
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
+            "funding": [{
+                "url": "https://funding.communitybridge.org/projects/laminas-project",
+                "type": "community_bridge"
+            }],
             "time": "2021-09-02T17:10:53+00:00"
         },
         {
@@ -3126,12 +2877,10 @@
                 "feed",
                 "laminas"
             ],
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
+            "funding": [{
+                "url": "https://funding.communitybridge.org/projects/laminas-project",
+                "type": "community_bridge"
+            }],
             "time": "2021-09-20T18:11:11+00:00"
         },
         {
@@ -3177,12 +2926,10 @@
                 "laminas",
                 "stdlib"
             ],
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
+            "funding": [{
+                "url": "https://funding.communitybridge.org/projects/laminas-project",
+                "type": "community_bridge"
+            }],
             "time": "2021-11-10T11:33:52+00:00"
         },
         {
@@ -3231,14 +2978,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Phil Bennett",
-                    "email": "philipobenito@gmail.com",
-                    "homepage": "http://www.philipobenito.com",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Phil Bennett",
+                "email": "philipobenito@gmail.com",
+                "homepage": "http://www.philipobenito.com",
+                "role": "Developer"
+            }],
             "description": "A fast and intuitive dependency injection container.",
             "homepage": "https://github.com/thephpleague/container",
             "keywords": [
@@ -3250,12 +2995,10 @@
                 "provider",
                 "service"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/philipobenito",
-                    "type": "github"
-                }
-            ],
+            "funding": [{
+                "url": "https://github.com/philipobenito",
+                "type": "github"
+            }],
             "time": "2021-02-22T09:20:06+00:00"
         },
         {
@@ -3296,8 +3039,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Matt Butcher",
                     "email": "technosophos@gmail.com"
                 },
@@ -3363,11 +3105,9 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "authors": [
-                {
-                    "name": "Nikita Popov"
-                }
-            ],
+            "authors": [{
+                "name": "Nikita Popov"
+            }],
             "description": "A PHP parser written in PHP",
             "keywords": [
                 "parser",
@@ -3419,8 +3159,7 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Vincent Blavet",
                     "email": "vincent@phpconcept.net"
                 },
@@ -3439,8 +3178,7 @@
                 "archive",
                 "tar"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://github.com/mrook",
                     "type": "github"
                 },
@@ -3478,8 +3216,7 @@
             "license": [
                 "BSD-2-Clause"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Andrei Zmievski",
                     "email": "andrei@php.net",
                     "role": "Lead"
@@ -3532,13 +3269,11 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "authors": [
-                {
-                    "name": "Christian Weiske",
-                    "email": "cweiske@php.net",
-                    "role": "Lead"
-                }
-            ],
+            "authors": [{
+                "name": "Christian Weiske",
+                "email": "cweiske@php.net",
+                "role": "Lead"
+            }],
             "description": "Minimal set of PEAR core files to be used as composer dependency",
             "time": "2021-08-10T22:31:03+00:00"
         },
@@ -3580,8 +3315,7 @@
             "license": [
                 "BSD-2-Clause"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Helgi Thormar",
                     "email": "dufuz@php.net"
                 },
@@ -3629,12 +3363,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interface for caching libraries",
             "keywords": [
                 "cache",
@@ -3670,12 +3402,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "https://www.php-fig.org/"
+            }],
             "description": "Common Container Interface (PHP FIG PSR-11)",
             "homepage": "https://github.com/php-fig/container",
             "keywords": [
@@ -3720,12 +3450,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
@@ -3771,12 +3499,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interface for HTTP messages",
             "homepage": "https://github.com/php-fig/http-message",
             "keywords": [
@@ -3821,12 +3547,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "https://www.php-fig.org/"
+            }],
             "description": "Common interface for logging libraries",
             "homepage": "https://github.com/php-fig/log",
             "keywords": [
@@ -3890,13 +3614,11 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Justin Hileman",
-                    "email": "justin@justinhileman.info",
-                    "homepage": "http://justinhileman.com"
-                }
-            ],
+            "authors": [{
+                "name": "Justin Hileman",
+                "email": "justin@justinhileman.info",
+                "homepage": "http://justinhileman.com"
+            }],
             "description": "An interactive shell for modern PHP.",
             "homepage": "http://psysh.org",
             "keywords": [
@@ -3938,12 +3660,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
+            "authors": [{
+                "name": "Ralph Khattar",
+                "email": "ralph.khattar@gmail.com"
+            }],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
         },
@@ -3985,12 +3705,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                }
-            ],
+            "authors": [{
+                "name": "Igor Wiedler",
+                "email": "igor@wiedler.ch"
+            }],
             "description": "Builder for stack middleware based on HttpKernelInterface.",
             "keywords": [
                 "stack"
@@ -4042,12 +3760,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Symfony CMF Community",
-                    "homepage": "https://github.com/symfony-cmf/Routing/contributors"
-                }
-            ],
+            "authors": [{
+                "name": "Symfony CMF Community",
+                "homepage": "https://github.com/symfony-cmf/Routing/contributors"
+            }],
             "description": "Extends the Symfony routing component for dynamic routes and chaining several routers",
             "homepage": "http://cmf.symfony.com",
             "keywords": [
@@ -4103,8 +3819,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4115,8 +3830,7 @@
             ],
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4190,8 +3904,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4202,8 +3915,7 @@
             ],
             "description": "Eases the creation of beautiful and testable command line interfaces",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4255,8 +3967,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4267,8 +3978,7 @@
             ],
             "description": "Provides tools to ease debugging PHP code",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4338,8 +4048,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4350,8 +4059,7 @@
             ],
             "description": "Allows you to standardize and centralize the way objects are constructed in your application",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4402,8 +4110,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -4414,8 +4121,7 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4467,8 +4173,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4479,8 +4184,7 @@
             ],
             "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4548,8 +4252,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4560,8 +4263,7 @@
             ],
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4616,8 +4318,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -4636,8 +4337,7 @@
                 "interoperability",
                 "standards"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4684,8 +4384,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4696,8 +4395,7 @@
             ],
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4744,8 +4442,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4756,8 +4453,7 @@
             ],
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4811,8 +4507,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -4831,8 +4526,7 @@
                 "interoperability",
                 "standards"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4884,8 +4578,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4896,8 +4589,7 @@
             ],
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -4985,8 +4677,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -4997,8 +4688,7 @@
             ],
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5061,8 +4751,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -5077,8 +4766,7 @@
                 "mime",
                 "mime-type"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5135,8 +4823,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Gert de Pagter",
                     "email": "BackEndTea@gmail.com"
                 },
@@ -5153,8 +4840,7 @@
                 "polyfill",
                 "portable"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5211,8 +4897,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -5230,8 +4915,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5290,8 +4974,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Laurent Bassin",
                     "email": "laurent@bassin.info"
                 },
@@ -5314,8 +4997,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5375,8 +5057,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -5395,8 +5076,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5453,8 +5133,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -5472,8 +5151,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5527,8 +5205,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -5545,8 +5222,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5603,8 +5279,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -5621,8 +5296,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5679,8 +5353,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Ion Bazan",
                     "email": "ion.bazan@gmail.com"
                 },
@@ -5701,8 +5374,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5759,8 +5431,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -5777,8 +5448,7 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5824,8 +5494,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -5836,8 +5505,7 @@
             ],
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5902,8 +5570,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -5920,8 +5587,7 @@
                 "psr-17",
                 "psr-7"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -5988,8 +5654,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -6006,8 +5671,7 @@
                 "uri",
                 "url"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6085,8 +5749,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -6097,8 +5760,7 @@
             ],
             "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6157,8 +5819,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -6177,8 +5838,7 @@
                 "interoperability",
                 "standards"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6251,8 +5911,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -6263,8 +5922,7 @@
             ],
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6318,8 +5976,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -6338,8 +5995,7 @@
                 "interoperability",
                 "standards"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6426,8 +6082,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -6438,8 +6093,7 @@
             ],
             "description": "Symfony Twig Bridge",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6529,8 +6183,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -6541,8 +6194,7 @@
             ],
             "description": "Provides tools to validate values",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6611,8 +6263,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -6627,8 +6278,7 @@
                 "debug",
                 "dump"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6683,8 +6333,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
@@ -6695,8 +6344,7 @@
             ],
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -6752,8 +6400,7 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com",
                     "homepage": "http://fabien.potencier.org",
@@ -6774,8 +6421,7 @@
             "keywords": [
                 "templating"
             ],
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://github.com/fabpot",
                     "type": "github"
                 },
@@ -6868,12 +6514,10 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
-                    "name": "Florian Weber",
-                    "email": "florian@webflo.org"
-                }
-            ],
+            "authors": [{
+                "name": "Florian Weber",
+                "email": "florian@webflo.org"
+            }],
             "description": "Helper class to locate a Drupal installation from a given path.",
             "time": "2020-10-27T09:42:17+00:00"
         },
@@ -6917,12 +6561,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
+            "authors": [{
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            }],
             "description": "Assertions to validate method input/output with nice error messages.",
             "keywords": [
                 "assert",
@@ -6968,12 +6610,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
+            "authors": [{
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            }],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
             "abandoned": "symfony/filesystem",
             "time": "2015-12-17T08:42:14+00:00"
@@ -7012,8 +6652,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Zumba Fitness, LLC",
                     "homepage": "https://tech.zumba.com"
                 },

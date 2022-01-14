@@ -1,0 +1,8 @@
+uuid: 6c5e5a7c-f16a-4f72-bd22-e347044a64af
+langcode: und
+status: true
+dependencies: {  }
+name: 'Difficulty Icon'
+vid: difficulty_icon
+description: 'Select / Upload an image which represents this difficulty.'
+weight: 0

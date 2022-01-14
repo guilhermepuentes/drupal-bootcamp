@@ -1,0 +1,30 @@
+uuid: b8cbf3c8-db99-496f-9d64-b3ecc8f721e5
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_waterfall_image
+field_name: field_waterfall_image
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

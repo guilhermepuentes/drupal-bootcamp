@@ -1,0 +1,22 @@
+uuid: f2f4cafd-eef6-4c19-8147-2ec307d8ccfe
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: walking_url_alias
+label: 'walking url alias'
+type: 'canonical_entities:node'
+pattern: '/walking/[node:title]'
+selection_criteria:
+  d37872cf-c5c2-4a3e-8fdf-6ef80236531e:
+    id: node_type
+    negate: false
+    uuid: d37872cf-c5c2-4a3e-8fdf-6ef80236531e
+    context_mapping:
+      node: node
+    bundles:
+      waterfall: waterfall
+selection_logic: and
+weight: -5
+relationships: {  }

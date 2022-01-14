@@ -1,0 +1,22 @@
+uuid: 2d08d905-05d0-449f-8982-5d12568a3b2c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.waterfall
+id: node.waterfall.promote
+field_name: promote
+entity_type: node
+bundle: waterfall
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

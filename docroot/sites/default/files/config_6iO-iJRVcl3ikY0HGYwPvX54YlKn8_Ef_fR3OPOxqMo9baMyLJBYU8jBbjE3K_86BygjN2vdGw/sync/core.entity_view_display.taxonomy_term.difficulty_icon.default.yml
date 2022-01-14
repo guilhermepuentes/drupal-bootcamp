@@ -1,0 +1,34 @@
+uuid: 7436c9b9-3808-4336-a1b0-9e841c14c26c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.difficulty_icon.field_difficulty_icon
+    - image.style.thumbnail
+    - taxonomy.vocabulary.difficulty_icon
+  module:
+    - media
+    - text
+id: taxonomy_term.difficulty_icon.default
+targetEntityType: taxonomy_term
+bundle: difficulty_icon
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_difficulty_icon:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: content
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

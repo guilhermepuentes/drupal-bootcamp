@@ -1,0 +1,11 @@
+uuid: 715700f3-bebc-4e57-9b1f-19f269ab0936
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.location
+id: taxonomy_term.location
+target_entity_type_id: taxonomy_term
+target_bundle: location
+default_langcode: und
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 5b7dbd88-b7e0-4c9a-87d2-d47693d14a31
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_walking_and_driving_instru
+field_name: field_walking_and_driving_instru
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

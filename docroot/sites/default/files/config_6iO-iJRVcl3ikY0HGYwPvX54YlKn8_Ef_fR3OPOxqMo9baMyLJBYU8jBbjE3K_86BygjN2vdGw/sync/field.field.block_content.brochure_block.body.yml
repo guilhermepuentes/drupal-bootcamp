@@ -1,0 +1,23 @@
+uuid: a8a61e2c-646d-49de-80c8-738215be65c5
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.brochure_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.brochure_block.body
+field_name: body
+entity_type: block_content
+bundle: brochure_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

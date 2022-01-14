@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: pt-br
+uuid: a5476086-e00b-4396-a5c5-6525ac88a256
+name: 'The Waterfall Handbook'
+mail: guilherme.puentes@justdigital.com.br
+slogan: 'Descubra Londres do seu jeito!'
+page:
+  403: /node/1
+  404: /node/2
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: pt-br
+mail_notification: ''

@@ -2,8 +2,8 @@
 /drush/contrib/
 /vendor/
 /docroot/core/
-/docroot/modules/contrib/
-/docroot/themes/contrib/
+#/docroot/modules/contrib/
+#/docroot/themes/contrib/
 /docroot/profiles/contrib/
 /docroot/libraries/
 
@@ -12,7 +12,7 @@
 /docroot/sites/*/settings.local.php
 
 # Ignore Drupal's file directory
-/docroot/sites/*/files/
+#/docroot/sites/*/files/
 
 # Ignore SimpleTest multi-site environment
 /docroot/sites/simpletest

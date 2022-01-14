@@ -1,0 +1,11 @@
+uuid: eff9d6eb-0308-4e0f-a68e-265d1ad093e9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.difficulty_icon
+id: taxonomy_term.difficulty_icon
+target_entity_type_id: taxonomy_term
+target_bundle: difficulty_icon
+default_langcode: und
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: d088ca6d-61c9-4116-a813-be55eb7e2fb7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.waterfall
+id: node.waterfall
+target_entity_type_id: node
+target_bundle: waterfall
+default_langcode: und
+language_alterable: false

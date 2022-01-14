@@ -1,0 +1,113 @@
+uuid: 88591bbc-f85a-4295-8da2-156302d60799
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.page
+    - node.type.waterfall
+    - taxonomy.vocabulary.difficulty_icon
+    - taxonomy.vocabulary.location
+    - taxonomy.vocabulary.tags
+  module:
+    - file
+    - media
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - workspaces
+id: editor_de_conteudo
+label: 'Editor de conteúdo'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer media'
+  - 'administer media types'
+  - 'administer taxonomy'
+  - 'administer workspaces'
+  - 'bypass entity access own workspace'
+  - 'change own username'
+  - 'create article content'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create terms in difficulty_icon'
+  - 'create terms in location'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create waterfall content'
+  - 'create workspace'
+  - 'delete any article content'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete any waterfall content'
+  - 'delete article revisions'
+  - 'delete media'
+  - 'delete own article content'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'delete own waterfall content'
+  - 'delete page revisions'
+  - 'delete terms in difficulty_icon'
+  - 'delete terms in location'
+  - 'delete terms in tags'
+  - 'delete waterfall revisions'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit any waterfall content'
+  - 'edit own article content'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'edit own waterfall content'
+  - 'edit own workspace'
+  - 'edit terms in difficulty_icon'
+  - 'edit terms in location'
+  - 'edit terms in tags'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'revert waterfall revisions'
+  - 'update any media'
+  - 'update media'
+  - 'view all media revisions'
+  - 'view any workspace'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own workspace'
+  - 'view page revisions'
+  - 'view the administration theme'
+  - 'view waterfall revisions'

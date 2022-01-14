@@ -1,0 +1,30 @@
+uuid: 85577bcf-e876-4e98-80a9-beb277bb19da
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:brochure_block:bebe8859-6a9b-4c18-8d63-9cfdb48e6774'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: new_zealan_dhiking_guide
+theme: olivero
+region: highlighted
+weight: -8
+provider: null
+plugin: 'block_content:bebe8859-6a9b-4c18-8d63-9cfdb48e6774'
+settings:
+  id: 'block_content:bebe8859-6a9b-4c18-8d63-9cfdb48e6774'
+  label: 'New Zealand Hiking Guide'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /about-us

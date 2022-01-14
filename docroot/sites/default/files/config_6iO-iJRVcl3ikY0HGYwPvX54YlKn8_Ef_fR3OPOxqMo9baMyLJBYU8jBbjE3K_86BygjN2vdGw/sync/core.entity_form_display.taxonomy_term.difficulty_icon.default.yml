@@ -1,0 +1,60 @@
+uuid: 20da6c19-2de0-42bc-a42a-2c68e9a4a36e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.difficulty_icon.field_difficulty_icon
+    - taxonomy.vocabulary.difficulty_icon
+  module:
+    - media_library
+    - path
+    - text
+id: taxonomy_term.difficulty_icon.default
+targetEntityType: taxonomy_term
+bundle: difficulty_icon
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_difficulty_icon:
+    type: media_library_widget
+    weight: 101
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

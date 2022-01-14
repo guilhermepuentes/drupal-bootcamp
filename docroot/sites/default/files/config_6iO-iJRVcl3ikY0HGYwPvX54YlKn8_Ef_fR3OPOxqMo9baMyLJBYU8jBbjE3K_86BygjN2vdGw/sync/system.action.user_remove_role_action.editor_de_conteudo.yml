@@ -1,0 +1,14 @@
+uuid: a5046642-9661-4687-a334-304f94668a0c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.editor_de_conteudo
+  module:
+    - user
+id: user_remove_role_action.editor_de_conteudo
+label: 'Remover o papel Editor de conteúdo dos usuários selecionados'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_de_conteudo

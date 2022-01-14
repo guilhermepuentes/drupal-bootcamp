@@ -1,0 +1,17 @@
+uuid: bd9d43d2-9b09-4305-985a-46e73cc2c80c
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Waterfall
+type: waterfall
+description: "Describe the <b>Waterfall</b>  as beautifully and specifically as you can.\r\n"
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
